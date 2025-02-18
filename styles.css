@@ -134,3 +134,14 @@ footer {
     border-radius: 10px;
     margin-top: 30px;
 }
+/* Logo dans l'en-tête */
+.logo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo-img {
+    max-width: 150px; /* Limite la taille du logo */
+    height: auto;
+    margin-bottom: 10px; /* Espacement entre le logo et le texte */
+}
