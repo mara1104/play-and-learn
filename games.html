@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeux Educatifs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FFDD57;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .game-list {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .game-category {
+            background-color: #FFE4B5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .game-category h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .game-category ul {
+            list-style: none;
+            padding: 0;
+        }
+        .game-category ul li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .game-category ul li a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .game-category ul li a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jeux Educatifs</h1>
+        <p>Choisissez votre matière et amusez-vous avec nos jeux éducatifs !</p>
+    </header>
+
+    <div class="game-list">
+        <div id="math" class="game-category">
+            <h2>Mathématiques</h2>
+            <ul>
+                <li><a href="#">Course des Calculs</a></li>
+                <li><a href="#">Calculs de Multiplications et Divisions</a></li>
+            </ul>
+        </div>
+
+        <div id="francais" class="game-category">
+            <h2>Français</h2>
+            <ul>
+                <li><a href="#">Jeu de Mémoire (Mots et Images)</a></li>
+                <li><a href="#">Complète la Phrase</a></li>
+            </ul>
+        </div>
+
+        <div id="allemand" class="game-category">
+            <h2>Allemand</h2>
+            <ul>
+                <li><a href="#">Trouve le bon article (der, die, das)</a></li>
+                <li><a href="#">Forme des phrases en Allemand</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
