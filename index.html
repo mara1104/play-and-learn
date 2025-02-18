@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play and Learn</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Lien vers le fichier CSS -->
+    <title>Play and Learn - Accueil</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Play and Learn</h1>
-        <p>Des jeux éducatifs pour les enfants !</p>
+        <p>Apprendre en s'amusant avec des jeux éducatifs !</p>
     </header>
 
     <div class="main-content">
-        <h2>Bienvenue sur Play and Learn !</h2>
-        <p>Explorez nos jeux éducatifs amusants pour apprendre tout en jouant.</p>
-        <img src="logo.png" alt="Logo Play and Learn">
-        <div>
-            <a href="jeux.html" class="button">Jouer maintenant !</a>
+        <div class="intro">
+            <h2>Bienvenue dans un monde de jeux éducatifs !</h2>
+            <p>Choisis tes matières et commence à apprendre tout en t'amusant.</p>
+        </div>
+
+        <!-- Formulaire d'inscription centré -->
+        <div class="signup-form">
+            <h3>Inscris-toi pour commencer à jouer !</h3>
+            <form action="#" method="POST">
+                <input type="text" id="name" placeholder="Ton nom" required><br>
+                <input type="email" id="email" placeholder="Ton email" required><br>
+                <input type="password" id="password" placeholder="Ton mot de passe" required><br>
+                <button type="submit" class="button">S'inscrire</button>
+            </form>
+        </div>
+
+        <div class="button-container">
+            <a href="jeux.html" class="button">Accéder aux jeux</a>
         </div>
     </div>
 </body>
