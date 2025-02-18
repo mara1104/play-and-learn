@@ -140,7 +140,7 @@ footer {
     margin-bottom: 10px;
 }
 
-.logo-img {
+.logo.jpeg {
     max-width: 150px; /* Limite la taille du logo */
     height: auto;
     margin-bottom: 10px; /* Espacement entre le logo et le texte */
