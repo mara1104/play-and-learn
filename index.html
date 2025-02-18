@@ -3,35 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play and Learn - Accueil</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Play and Learn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Settings */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+            text-align: center;
+            color: #333;
+        }
+        /* Header */
+        header {
+            background: #FF6347;
+            color: white;
+            padding: 50px 0;
+            font-size: 3em;
+            font-weight: 600;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        /* Navigation Links */
+        .nav-links {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            background-color: #FF6347;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-links a:hover {
+            background-color: #ff1493;
+        }
+        /* Call to Action Button */
+        .cta-button {
+            background-color: #ff1493;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 30px;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 40px;
+            display: inline-block;
+        }
+        .cta-button:hover {
+            background-color: #ff6347;
+        }
+        /* Form Container */
+        .form-container {
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 40px auto;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            border: 2px solid #FF6347;
+            border-radius: 8px;
+            font-size: 1.2em;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 20px;
+            background-color: #ff1493;
+            color: white;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #ff6347;
+        }
+        /* Footer */
+        footer {
+            background-color: #FF6347;
+            color: white;
+            padding: 20px 0;
+            font-size: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Section "Jeux" */
+        .game-section {
+            background-color: #ff1493;
+            color: white;
+            padding: 50px 0;
+        }
+        .game-section h2 {
+            font-size: 2.5em;
+        }
+        .game-button {
+            background-color: #ff6347;
+            color: white;
+            padding: 20px 40px;
+            margin: 20px;
+            border-radius: 30px;
+            font-size: 1.5em;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        .game-button:hover {
+            background-color: #ff1493;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
-        <h1>Play and Learn</h1>
-        <p>Apprendre en s'amusant avec des jeux éducatifs !</p>
+        Play and Learn<br>
+        <p>Apprends en t'amusant !</p>
     </header>
 
-    <div class="main-content">
-        <div class="intro">
-            <h2>Bienvenue dans un monde de jeux éducatifs !</h2>
-            <p>Choisis tes matières et commence à apprendre tout en t'amusant.</p>
-        </div>
-
-        <!-- Formulaire d'inscription centré -->
-        <div class="signup-form">
-            <h3>Inscris-toi pour commencer à jouer !</h3>
-            <form action="#" method="POST">
-                <input type="text" id="name" placeholder="Ton nom" required><br>
-                <input type="email" id="email" placeholder="Ton email" required><br>
-                <input type="password" id="password" placeholder="Ton mot de passe" required><br>
-                <button type="submit" class="button">S'inscrire</button>
-            </form>
-        </div>
-
-        <div class="button-container">
-            <a href="jeux.html" class="button">Accéder aux jeux</a>
-        </div>
+    <!-- Navigation Links -->
+    <div class="nav-links">
+        <a href="#about">À propos de nous</a>
+        <a href="#games">Jeux</a>
+        <a href="#contact">Contactez-nous</a>
     </div>
+
+    <!-- Call to Action Button -->
+    <a href="#" class="cta-button">Commence à jouer maintenant !</a>
+
+    <!-- Form Section -->
+    <div class="form-container">
+        <h2>Inscris-toi pour commencer à jouer</h2>
+        <form>
+            <input type="text" placeholder="Ton nom" required><br>
+            <input type="email" placeholder="Ton email" required><br>
+            <button type="submit">S'inscrire</button>
+        </form>
+    </div>
+
+    <!-- Jeux Section -->
+    <div id="games" class="game-section">
+        <h2>Découvre nos jeux amusants</h2>
+        <a href="#" class="game-button">Maths : Course Mathématique</a>
+        <a href="#" class="game-button">Français : Memory des mots</a>
+        <a href="#" class="game-button">Allemand : Choisis le bon article</a>
+    </div>
+
+    <!-- À propos Section -->
+    <div id="about" style="padding: 50px 0; background-color: #f9f9f9;">
+        <h2>À propos de nous</h2>
+        <p>Nous sommes une équipe passionnée par l'éducation ludique et nous voulons rendre l'apprentissage amusant pour les enfants !</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" style="padding: 50px 0; background-color: #ff1493; color: white;">
+        <h2>Contactez-nous</h2>
+        <p>Vous avez des questions ? N'hésitez pas à nous contacter par email : contact@playandlearn.com</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Play and Learn - Tous droits réservés</p>
+    </footer>
+
 </body>
 </html>
