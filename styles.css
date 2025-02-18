@@ -1,127 +1,125 @@
-/* Corps de la page */
+/* Définir la police générale */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #F1FAEE; /* Fond clair */
-    color: #1D3557; /* Bleu foncé */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-/* Header */
+/* Entête et Navigation */
 header {
-    background-color: #E63946; /* Rouge foncé */
-    color: #fff;
+    background-color: #4a90e2;
     padding: 20px;
     text-align: center;
 }
 
-header h1 {
-    font-size: 3em;
-    margin: 0;
+nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-header p {
-    font-size: 1.2em;
-    margin: 10px 0;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-/* Contenu principal */
-.main-content {
-    padding: 50px 20px;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Intro */
-.intro {
-    background-color: #457B9D; /* Bleu clair */
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Section d'introduction */
+#accueil {
+    background-color: #ff7b5f;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
 }
 
-.intro h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.intro p {
-    font-size: 1.5em;
-}
-
-/* Formulaire d'inscription */
-.signup-form {
-    background-color: #F1FAEE;
-    padding: 30px;
-    border-radius: 8px;
-    margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-}
-
-.signup-form h3 {
-    font-size: 2em;
+#accueil h1 {
+    font-size: 48px;
     margin-bottom: 20px;
 }
 
-.signup-form input {
+#accueil p {
+    font-size: 24px;
+}
+
+button {
+    background-color: #4a90e2;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    color: #4a90e2;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li {
+    margin: 20px 0;
+}
+
+section ul li a {
+    font-size: 24px;
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+section ul li a:hover {
+    color: #ff7b5f;
+}
+
+/* Formulaire de contact */
+form input, form textarea {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 16px;
 }
 
-.signup-form button {
-    width: 100%;
-    padding: 15px;
-    background-color: #E63946; /* Rouge */
-    color: #fff;
+form button {
+    background-color: #4a90e2;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    font-size: 1.2em;
     cursor: pointer;
-}
-
-.signup-form button:hover {
-    background-color: #F1FAEE; /* Fond clair */
-    color: #E63946;
-}
-
-/* Boutons */
-.button {
-    display: inline-block;
-    background-color: #1D3557; /* Bleu foncé */
-    color: #fff;
-    padding: 15px 25px;
-    margin: 30px;
-    text-decoration: none;
-    font-size: 1.5em;
     border-radius: 5px;
-    transition: background-color 0.3s;
 }
 
-.button:hover {
-    background-color: #E63946; /* Rouge foncé */
+form button:hover {
+    background-color: #357abd;
 }
 
-.button-container {
-    margin-top: 30px;
-}
-
-/* Responsivité */
-@media (max-width: 600px) {
-    .intro h2 {
-        font-size: 2em;
-    }
-
-    .intro p {
-        font-size: 1.2em;
-    }
-
-    .signup-form {
-        max-width: 100%;
-        padding: 20px;
-    }
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
