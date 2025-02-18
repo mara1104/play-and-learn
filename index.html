@@ -4,171 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play and Learn</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Global Settings */
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f8ff;
+            color: #333;
+            text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f1f1f1;
-            text-align: center;
-            color: #333;
         }
-        /* Header */
         header {
-            background: #FF6347;
-            color: white;
-            padding: 50px 0;
-            font-size: 3em;
-            font-weight: 600;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-        }
-        header p {
-            font-size: 1.2em;
-            margin-top: 20px;
-        }
-        /* Navigation Links */
-        .nav-links {
-            margin-top: 20px;
-            margin-bottom: 40px;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            background-color: #FF6347;
-            padding: 10px 20px;
-            margin: 10px;
-            font-size: 1.2em;
-            border-radius: 10px;
-            transition: background-color 0.3s ease;
-        }
-        .nav-links a:hover {
-            background-color: #ff1493;
-        }
-        /* Call to Action Button */
-        .cta-button {
-            background-color: #ff1493;
-            color: white;
-            padding: 20px 40px;
-            border-radius: 30px;
-            font-size: 1.5em;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            margin-top: 40px;
-            display: inline-block;
-        }
-        .cta-button:hover {
-            background-color: #ff6347;
-        }
-        /* Form Container */
-        .form-container {
-            padding: 40px;
-            background-color: #fff;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            max-width: 400px;
-            margin: 40px auto;
-        }
-        .form-container input {
-            width: 100%;
-            padding: 15px;
-            margin: 15px 0;
-            border: 2px solid #FF6347;
-            border-radius: 8px;
-            font-size: 1.2em;
-        }
-        .form-container button {
-            width: 100%;
+            background-color: #1e90ff;  /* Bleu vif */
             padding: 20px;
-            background-color: #ff1493;
+            font-size: 2.5em;
+            color: #fff;
+            border-bottom: 5px solid #ff6347; /* Orange tomate */
+        }
+        .content {
+            margin-top: 50px;
+        }
+        .content a {
+            font-size: 1.8em;
+            color: #ff6347;  /* Orange vif */
+            text-decoration: none;
+            margin: 20px;
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #32cd32;  /* Vert lime */
+            border-radius: 12px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .content a:hover {
+            background-color: #ff6347; /* Changement d'orange */
             color: white;
-            font-size: 1.5em;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
         }
-        .form-container button:hover {
-            background-color: #ff6347;
+        .hidden {
+            display: none;
         }
-        /* Footer */
         footer {
-            background-color: #FF6347;
-            color: white;
-            padding: 20px 0;
-            font-size: 1em;
             position: fixed;
             bottom: 0;
             width: 100%;
-        }
-        /* Section "Jeux" */
-        .game-section {
-            background-color: #ff1493;
+            background-color: #1e90ff;
+            padding: 10px;
             color: white;
-            padding: 50px 0;
         }
-        .game-section h2 {
-            font-size: 2.5em;
+        h2 {
+            color: #1e90ff;
         }
-        .game-button {
-            background-color: #ff6347;
-            color: white;
-            padding: 20px 40px;
-            margin: 20px;
-            border-radius: 30px;
-            font-size: 1.5em;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
-        .game-button:hover {
-            background-color: #ff1493;
+        ul li {
+            font-size: 1.2em;
+            margin: 15px 0;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
-        Play and Learn<br>
-        <p>Apprends en t'amusant !</p>
+        Play and Learn
     </header>
 
-    <!-- Navigation Links -->
-    <div class="nav-links">
-        <a href="#about">À propos de nous</a>
-        <a href="#games">Jeux</a>
-        <a href="#contact">Contactez-nous</a>
+    <div class="content">
+        <a href="#" onclick="showPage('jeux')">Jeux</a>
+        <a href="#" onclick="showPage('contact')">Contactez-nous</a>
+        <a href="#" onclick="showPage('apropos')">À propos de nous</a>
     </div>
 
-    <!-- Call to Action Button -->
-    <a href="#" class="cta-button">Commence à jouer maintenant !</a>
-
-    <!-- Form Section -->
-    <div class="form-container">
-        <h2>Inscris-toi pour commencer à jouer</h2>
-        <form>
-            <input type="text" placeholder="Ton nom" required><br>
-            <input type="email" placeholder="Ton email" required><br>
-            <button type="submit">S'inscrire</button>
-        </form>
+    <div id="jeux" class="hidden">
+        <h2>Jeux</h2>
+        <p>Choisissez une matière pour commencer à jouer !</p>
+        <ul>
+            <li><a href="#">Mathématiques - Jeu 1</a></li>
+            <li><a href="#">Mathématiques - Jeu 2</a></li>
+            <li><a href="#">Français - Jeu 1</a></li>
+            <li><a href="#">Français - Jeu 2</a></li>
+            <li><a href="#">Allemand - Jeu 1</a></li>
+            <li><a href="#">Allemand - Jeu 2</a></li>
+        </ul>
     </div>
 
-    <!-- À propos Section -->
-    <div id="about" style="padding: 50px 0; background-color: #f9f9f9;">
-        <h2>À propos de nous</h2>
-        <p>Nous sommes une équipe passionnée par l'éducation ludique et nous voulons rendre l'apprentissage amusant pour les enfants !</p>
-    </div>
-
-    <!-- Contact Section -->
-    <div id="contact" style="padding: 50px 0; background-color: #ff1493; color: white;">
+    <div id="contact" class="hidden">
         <h2>Contactez-nous</h2>
-        <p>Vous avez des questions ? N'hésitez pas à nous contacter par email : contact@playandlearn.com</p>
+        <p>Si vous avez des questions, contactez-nous à : info@playandlearn.com</p>
     </div>
 
-    <!-- Footer -->
+    <div id="apropos" class="hidden">
+        <h2>À propos de nous</h2>
+        <p>Nous sommes une équipe passionnée par l'éducation des enfants et la création de jeux ludiques et pédagogiques.</p>
+    </div>
+
     <footer>
-        <p>© 2025 Play and Learn - Tous droits réservés</p>
+        &copy; 2025 Play and Learn
     </footer>
+
+    <script>
+        function showPage(page) {
+            // Cache toutes les sections
+            const pages = document.querySelectorAll('.hidden');
+            pages.forEach(page => page.classList.add('hidden'));
+
+            // Affiche la section demandée
+            const activePage = document.getElementById(page);
+            activePage.classList.remove('hidden');
+        }
+    </script>
 
 </body>
 </html>
