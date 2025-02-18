@@ -3,98 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play and Learn</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #FFDD57;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        .button {
-            display: inline-block;
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            margin: 10px;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #45a049;
-        }
-        .main-content {
-            text-align: center;
-            margin-top: 50px;
-        }
-        .main-content img {
-            width: 300px;
-            height: auto;
-        }
-        .games {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
-        }
-        .game-category {
-            text-align: center;
-            background-color: #FFE4B5;
-            padding: 20px;
-            border-radius: 8px;
-            width: 200px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .game-category a {
-            color: #333;
-            text-decoration: none;
-            font-size: 1.5em;
-        }
-        .game-category a:hover {
-            color: #4CAF50;
-        }
-    </style>
+    <title>Play & Learn</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Play and Learn</h1>
-        <p>Des jeux éducatifs pour les enfants !</p>
-    </header>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="Images/logo.jpg" alt="Logo Play & Learn">
+    </div>
 
-    <div class="main-content">
-        <h2>Bienvenue sur Play and Learn !</h2>
-        <p>Explorez nos jeux éducatifs amusants pour apprendre tout en jouant.</p>
-        <img src="logo.png" alt="Logo Play and Learn">
-        <div>
-            <a href="jeux.html" class="button">Jouer maintenant !</a>
-        </div>
+    <!-- Menu de navigation -->
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html" data-lang="home">Accueil</a></li>
+            <li><a href="game.html" data-lang="game">Jeux</a></li>
+            <li><a href="team.html" data-lang="team">Équipe</a></li>
+            <li><a href="contact.html" data-lang="contact">Contactez-nous</a></li>
+            <li><a href="shop.html" data-lang="shop">Boutique</a></li>
+        </ul>
     </div>
-    
-    <div class="games">
-        <div class="game-category">
-            <h3>Mathématiques</h3>
-            <a href="jeux.html#math">Voir les jeux</a>
-        </div>
-        <div class="game-category">
-            <h3>Français</h3>
-            <a href="jeux.html#francais">Voir les jeux</a>
-        </div>
-        <div class="game-category">
-            <h3>Allemand</h3>
-            <a href="jeux.html#allemand">Voir les jeux</a>
-        </div>
+
+    <!-- Sélecteur de langue -->
+    <div class="language-selector">
+        <label for="language-select">Choisir la langue :</label>
+        <select id="language-select">
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="lb">Luxembourgeois</option>
+        </select>
     </div>
+
+    <!-- Section d'accueil -->
+    <div class="home-section">
+        <h1 id="bienvenu">Bienvenue sur Play & Learn</h1>
+        <h2 id="subtext">Vos enfants pourront apprendre tout en s'amusant !</h2>
+    </div>
+
+    <!-- Formulaire de connexion -->
+    <div class="login-section">
+        <h2 data-lang="login">Se connecter</h2>
+        <form class="login-form">
+            <label for="username" data-lang="username">Pseudo</label>
+            <input type="text" id="username" name="username" placeholder="Entrez votre pseudo">
+            <label for="password" data-lang="password">Mot de passe</label>
+            <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe">
+            <button type="submit" data-lang="submit">Se connecter</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Play & Learn. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
