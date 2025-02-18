@@ -3,115 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Play and Learn</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f1f8ff;
-            color: #333;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #1e90ff;  /* Bleu vif */
-            padding: 20px;
-            font-size: 2.5em;
-            color: #fff;
-            border-bottom: 5px solid #ff6347; /* Orange tomate */
-        }
-        .content {
-            margin-top: 50px;
-        }
-        .content a {
-            font-size: 1.8em;
-            color: #ff6347;  /* Orange vif */
-            text-decoration: none;
-            margin: 20px;
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #32cd32;  /* Vert lime */
-            border-radius: 12px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .content a:hover {
-            background-color: #ff6347; /* Changement d'orange */
-            color: white;
-        }
-        .hidden {
-            display: none;
-        }
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #1e90ff;
-            padding: 10px;
-            color: white;
-        }
-        h2 {
-            color: #1e90ff;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            font-size: 1.2em;
-            margin: 15px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lien vers la bibliothèque Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
-        Play and Learn
+        <nav>
+            <ul>
+                <li><a href="#jeux">Jeux</a></li>
+                <li><a href="#contact">Contactez-nous</a></li>
+                <li><a href="#apropos">À propos de nous</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="content">
-        <a href="#" onclick="showPage('jeux')">Jeux</a>
-        <a href="#" onclick="showPage('contact')">Contactez-nous</a>
-        <a href="#" onclick="showPage('apropos')">À propos de nous</a>
-    </div>
+    <main>
+        <section id="accueil">
+            <div class="intro">
+                <h1>Bienvenue sur Play and Learn!</h1>
+                <p>Des jeux éducatifs pour apprendre tout en s'amusant !</p>
+                <button id="inscriptionBtn">Inscription avec Google</button>
+            </div>
+        </section>
 
-    <div id="jeux" class="hidden">
-        <h2>Jeux</h2>
-        <p>Choisissez une matière pour commencer à jouer !</p>
-        <ul>
-            <li><a href="#">Mathématiques - Jeu 1</a></li>
-            <li><a href="#">Mathématiques - Jeu 2</a></li>
-            <li><a href="#">Français - Jeu 1</a></li>
-            <li><a href="#">Français - Jeu 2</a></li>
-            <li><a href="#">Allemand - Jeu 1</a></li>
-            <li><a href="#">Allemand - Jeu 2</a></li>
-        </ul>
-    </div>
+        <section id="jeux">
+            <h2>Nos Jeux</h2>
+            <ul>
+                <li><a href="/jeux/math">Jeux Mathématiques</a></li>
+                <li><a href="/jeux/francais">Jeux Français</a></li>
+                <li><a href="/jeux/allemand">Jeux Allemand</a></li>
+            </ul>
+        </section>
 
-    <div id="contact" class="hidden">
-        <h2>Contactez-nous</h2>
-        <p>Si vous avez des questions, contactez-nous à : info@playandlearn.com</p>
-    </div>
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <p>Des questions? N'hésitez pas à nous contacter.</p>
+            <!-- Formulaire de contact simple -->
+            <form action="mailto:contact@playandlearn.com" method="post">
+                <input type="text" name="nom" placeholder="Votre nom" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+                <textarea name="message" placeholder="Votre message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
 
-    <div id="apropos" class="hidden">
-        <h2>À propos de nous</h2>
-        <p>Nous sommes une équipe passionnée par l'éducation des enfants et la création de jeux ludiques et pédagogiques.</p>
-    </div>
+        <section id="apropos">
+            <h2>À propos de nous</h2>
+            <p>Nous sommes une équipe passionnée par l'éducation et l'apprentissage ludique.</p>
+        </section>
+    </main>
 
     <footer>
-        &copy; 2025 Play and Learn
+        <p>&copy; 2025 Play and Learn. Tous droits réservés.</p>
     </footer>
 
-    <script>
-        function showPage(page) {
-            // Cache toutes les sections
-            const pages = document.querySelectorAll('.hidden');
-            pages.forEach(page => page.classList.add('hidden'));
-
-            // Affiche la section demandée
-            const activePage = document.getElementById(page);
-            activePage.classList.remove('hidden');
-        }
-    </script>
-
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="app.js"></script>
 </body>
 </html>
