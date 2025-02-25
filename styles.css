@@ -1,54 +1,138 @@
-/* Couleurs du Luxembourg */
-:root {
-    --color-red: #D52B1E;
-    --color-white: #FFFFFF;
-    --color-blue: #1A66B5;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenue sur notre site !</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Police pour un look moderne -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #FF0000, #002B7F); /* Couleurs du Luxembourg */
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--color-white);
-    color: var(--color-blue);
-    margin: 0;
-    padding: 0;
-}
+    .container {
+      text-align: center;
+      padding: 50px;
+    }
 
-.container {
-    text-align: center;
-    padding: 20px;
-}
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
 
-header h1 {
-    font-size: 3em;
-    color: var(--color-red);
-}
+    button {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background-color: #FFD700; /* Jaune vibrant */
+      border: none;
+      color: #333;
+      border-radius: 15px;
+      cursor: pointer;
+      margin: 10px;
+      transition: background-color 0.3s;
+    }
 
-main {
-    padding: 20px;
-}
+    button:hover {
+      background-color: #FF8C00; /* Jaune foncé à l'hover */
+    }
 
-button {
-    background-color: var(--color-blue);
-    color: var(--color-white);
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 10px;
-}
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
 
-button:hover {
-    background-color: var(--color-red);
-}
+    .button-container a {
+      text-decoration: none;
+    }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
+    .signup-section {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #FF6347; /* Couleur de fond rouge */
+      border-radius: 10px;
+    }
 
-.signup-section {
-    margin-top: 30px;
-}
+    .signup-section button {
+      background-color: #32CD32; /* Couleur verte pour l'inscription */
+    }
+
+    /* Ajouter des styles pour le fond avec des dessins ou animations */
+    .hero-image {
+      width: 100%;
+      height: 400px;
+      background-image: url('https://www.example.com/hero-image.png');
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    /* Ajout d'un effet d'ombre aux éléments */
+    .shadow {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Bienvenue dans notre monde magique !</h1>
+    <p>Rejoignez-nous et profitez de jeux amusants !</p>
+    <div class="hero-image"></div> <!-- Image d'en-tête dynamique -->
+
+    <div class="button-container">
+      <a href="contact.html"><button class="shadow">Contactez-nous</button></a>
+      <a href="about.html"><button class="shadow">À propos de nous</button></a>
+      <a href="games.html"><button class="shadow">Jeux</button></a>
+    </div>
+
+    <div class="signup-section">
+      <h2>Inscrivez-vous pour des jeux exclusifs !</h2>
+      <button id="signUpBtn" class="shadow">Inscription via Gmail</button>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script>
+    // Configuration de Firebase
+    const firebaseConfig = {
+      apiKey: "TON_API_KEY",
+      authDomain: "TON_PROJET.firebaseapp.com",
+      projectId: "TON_PROJET",
+      storageBucket: "TON_PROJET.appspot.com",
+      messagingSenderId: "TON_SENDER_ID",
+      appId: "TON_APP_ID"
+    };
+
+    // Initialisation de Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    // Fonction pour l'inscription via Google
+    document.getElementById("signUpBtn").addEventListener("click", function () {
+      const provider = new firebase.auth.GoogleAuthProvider();
+
+      // Connexion via une fenêtre pop-up
+      auth.signInWithPopup(provider)
+        .then((result) => {
+          const user = result.user;
+          alert("Bienvenue, " + user.displayName);
+          window.location.href = 'games.html'; // Redirection après inscription
+        })
+        .catch((error) => {
+          alert("Erreur d'inscription : " + error.message);
+        });
+    });
+  </script>
+
+</body>
+</html>
