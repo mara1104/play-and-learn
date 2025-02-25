@@ -3,34 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bienvenue sur notre site éducatif !</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Police amusante -->
+  <title>Mon Super Site !</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@700&family=Kalam:wght@400&display=swap" rel="stylesheet"> <!-- Polices fun -->
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      background: #FFEB3B; /* Fond jaune clair pour l'énergie */
+      font-family: 'Baloo Tamma 2', cursive;
       margin: 0;
       padding: 0;
-      color: #002B7F; /* Texte bleu foncé pour la lisibilité */
+      background-color: #ffecb3; /* Fond doux et clair */
     }
 
     header {
-      background: linear-gradient(to right, #FF0000, #002B7F); /* Couleurs du Luxembourg */
+      background: linear-gradient(45deg, #ff4040, #00aaff); /* Dégradé dynamique et fun */
       color: white;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
-      font-family: 'Pacifico', cursive; /* Police ludique */
+      font-family: 'Kalam', cursive;
     }
 
     h1 {
       font-size: 4rem;
       margin: 0;
-      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     }
 
     h2 {
       font-size: 1.5rem;
-      margin: 10px 0;
+      margin-top: 10px;
     }
 
     .container {
@@ -48,42 +47,44 @@
     button {
       padding: 20px 40px;
       font-size: 1.2rem;
-      background-color: #FF6347; /* Couleur orange vibrant */
+      background-color: #ff9800; /* Orange vif */
       border: none;
-      color: #fff;
-      border-radius: 25px;
+      color: white;
+      border-radius: 30px;
       cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      transition: background-color 0.3s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.3s;
     }
 
     button:hover {
-      background-color: #FF4500;
+      background-color: #f57c00;
+      transform: scale(1.1);
     }
 
     .button-container a {
       text-decoration: none;
     }
 
-    .signup-section {
-      margin-top: 50px;
-      padding: 20px;
-      background-color: #32CD32; /* Vert pour encourager l'inscription */
-      border-radius: 15px;
-    }
-
-    .signup-section button {
-      background-color: #FFD700; /* Jaune vif pour attirer l'attention */
-    }
-
     .hero-image {
       width: 100%;
       height: 300px;
-      background-image: url('https://www.example.com/hero-image.png');
+      background-image: url('https://www.example.com/hero-image.png'); /* Mettre ici une image de personnage amusant */
       background-size: cover;
       background-position: center;
-      border-radius: 10px;
-      margin-top: 20px;
+      border-radius: 15px;
+      margin-top: 30px;
+    }
+
+    .signup-section {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #4caf50; /* Vert vif */
+      border-radius: 15px;
+      color: white;
+    }
+
+    .signup-section button {
+      background-color: #2196f3; /* Bleu clair pour l'inscription */
     }
 
     .school-elements {
@@ -104,7 +105,7 @@
     }
 
     .footer {
-      background-color: #002B7F;
+      background-color: #00aaff;
       color: white;
       padding: 20px;
       text-align: center;
@@ -117,21 +118,21 @@
 <body>
 
   <header>
-    <h1>Bienvenue dans notre monde éducatif amusant !</h1>
-    <h2>Apprends tout en t'amusant avec nos jeux éducatifs !</h2>
+    <h1>Bienvenue dans notre monde magique !</h1>
+    <h2>Des jeux et des surprises pour t'amuser tout en apprenant !</h2>
   </header>
 
   <div class="container">
-    <div class="hero-image"></div> <!-- Image dynamique d'en-tête -->
+    <div class="hero-image"></div> <!-- Image dynamique amusante -->
 
     <div class="button-container">
-      <a href="contact.html"><button>Contactez-nous</button></a>
-      <a href="about.html"><button>À propos de nous</button></a>
-      <a href="games.html"><button>Jeux</button></a>
+      <a href="contact.html"><button>Contacte-nous</button></a>
+      <a href="about.html"><button>À propos</button></a>
+      <a href="games.html"><button>Jouer</button></a>
     </div>
 
     <div class="signup-section">
-      <h2>Inscrivez-vous pour des jeux exclusifs !</h2>
+      <h2>Inscris-toi et commence à jouer !</h2>
       <button id="signUpBtn">Inscription via Gmail</button>
     </div>
 
@@ -143,13 +144,12 @@
   </div>
 
   <div class="footer">
-    <p>&copy; 2025 Notre Site Éducatif - Tous droits réservés</p>
+    <p>&copy; 2025 Mon Site Magique - Tous droits réservés</p>
   </div>
 
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
   <script>
-    // Configuration de Firebase
     const firebaseConfig = {
       apiKey: "TON_API_KEY",
       authDomain: "TON_PROJET.firebaseapp.com",
@@ -159,23 +159,20 @@
       appId: "TON_APP_ID"
     };
 
-    // Initialisation de Firebase
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
 
-    // Fonction pour l'inscription via Google
     document.getElementById("signUpBtn").addEventListener("click", function () {
       const provider = new firebase.auth.GoogleAuthProvider();
 
-      // Connexion via une fenêtre pop-up
       auth.signInWithPopup(provider)
         .then((result) => {
           const user = result.user;
           alert("Bienvenue, " + user.displayName);
-          window.location.href = 'games.html'; // Redirection après inscription
+          window.location.href = 'games.html';
         })
         .catch((error) => {
-          alert("Erreur d'inscription : " + error.message);
+          alert("Erreur : " + error.message);
         });
     });
   </script>
