@@ -3,42 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bienvenue sur notre site !</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Police pour un look moderne -->
+  <title>Bienvenue sur notre site éducatif !</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Police amusante -->
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to right, #FF0000, #002B7F); /* Couleurs du Luxembourg */
+      background: #FFEB3B; /* Fond jaune clair pour l'énergie */
       margin: 0;
       padding: 0;
+      color: #002B7F; /* Texte bleu foncé pour la lisibilité */
+    }
+
+    header {
+      background: linear-gradient(to right, #FF0000, #002B7F); /* Couleurs du Luxembourg */
       color: white;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Pacifico', cursive; /* Police ludique */
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin: 0;
+      color: white;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 10px 0;
     }
 
     .container {
       text-align: center;
       padding: 50px;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
-
-    button {
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      background-color: #FFD700; /* Jaune vibrant */
-      border: none;
-      color: #333;
-      border-radius: 15px;
-      cursor: pointer;
-      margin: 10px;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #FF8C00; /* Jaune foncé à l'hover */
     }
 
     .button-container {
@@ -48,6 +45,22 @@
       margin-top: 30px;
     }
 
+    button {
+      padding: 20px 40px;
+      font-size: 1.2rem;
+      background-color: #FF6347; /* Couleur orange vibrant */
+      border: none;
+      color: #fff;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #FF4500;
+    }
+
     .button-container a {
       text-decoration: none;
     }
@@ -55,18 +68,17 @@
     .signup-section {
       margin-top: 50px;
       padding: 20px;
-      background-color: #FF6347; /* Couleur de fond rouge */
-      border-radius: 10px;
+      background-color: #32CD32; /* Vert pour encourager l'inscription */
+      border-radius: 15px;
     }
 
     .signup-section button {
-      background-color: #32CD32; /* Couleur verte pour l'inscription */
+      background-color: #FFD700; /* Jaune vif pour attirer l'attention */
     }
 
-    /* Ajouter des styles pour le fond avec des dessins ou animations */
     .hero-image {
       width: 100%;
-      height: 400px;
+      height: 300px;
       background-image: url('https://www.example.com/hero-image.png');
       background-size: cover;
       background-position: center;
@@ -74,30 +86,64 @@
       margin-top: 20px;
     }
 
-    /* Ajout d'un effet d'ombre aux éléments */
-    .shadow {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    .school-elements {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
     }
 
+    .school-elements img {
+      width: 100px;
+      height: auto;
+      transition: transform 0.3s;
+    }
+
+    .school-elements img:hover {
+      transform: scale(1.1);
+    }
+
+    .footer {
+      background-color: #002B7F;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
 
+  <header>
+    <h1>Bienvenue dans notre monde éducatif amusant !</h1>
+    <h2>Apprends tout en t'amusant avec nos jeux éducatifs !</h2>
+  </header>
+
   <div class="container">
-    <h1>Bienvenue dans notre monde magique !</h1>
-    <p>Rejoignez-nous et profitez de jeux amusants !</p>
-    <div class="hero-image"></div> <!-- Image d'en-tête dynamique -->
+    <div class="hero-image"></div> <!-- Image dynamique d'en-tête -->
 
     <div class="button-container">
-      <a href="contact.html"><button class="shadow">Contactez-nous</button></a>
-      <a href="about.html"><button class="shadow">À propos de nous</button></a>
-      <a href="games.html"><button class="shadow">Jeux</button></a>
+      <a href="contact.html"><button>Contactez-nous</button></a>
+      <a href="about.html"><button>À propos de nous</button></a>
+      <a href="games.html"><button>Jeux</button></a>
     </div>
 
     <div class="signup-section">
       <h2>Inscrivez-vous pour des jeux exclusifs !</h2>
-      <button id="signUpBtn" class="shadow">Inscription via Gmail</button>
+      <button id="signUpBtn">Inscription via Gmail</button>
     </div>
+
+    <div class="school-elements">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Emoji_education.svg/1200px-Emoji_education.svg.png" alt="livre" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Emoji_education_pencil.svg/1200px-Emoji_education_pencil.svg.png" alt="crayon" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Emoji_schoolbag.svg/1200px-Emoji_schoolbag.svg.png" alt="sac à dos" />
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 Notre Site Éducatif - Tous droits réservés</p>
   </div>
 
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
