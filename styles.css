@@ -5,68 +5,142 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #a4d3a2; /* Couleur de fond inspirée par la nature */
     color: #333;
+    background-image: url('safari-background.jpg'); /* Image de fond thème safari */
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 header {
-    background-color: #002f6c; /* Bleu du Luxembourg */
+    background-color: rgba(0, 128, 0, 0.7); /* Vert de la nature */
     padding: 1em;
     text-align: center;
+    border-radius: 10px;
 }
 
 nav button {
-    background-color: #e4002b; /* Rouge du Luxembourg */
+    background-color: #f4a261; /* Couleur chaleureuse inspirée du sable */
     color: white;
-    padding: 10px 20px;
+    padding: 15px 25px;
     border: none;
     margin: 0 10px;
     cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 nav button:hover {
-    background-color: #b3001b;
+    background-color: #e76f51;
 }
 
 #home {
     text-align: center;
-    padding: 2em;
-    background-color: #ffffff;
+    padding: 3em;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    margin: 2em 5%;
+    animation: bounceIn 2s;
 }
 
 h1 {
-    color: #002f6c;
+    color: #2d6a4f;
+    font-size: 3em;
 }
 
 button {
-    background-color: #e4002b;
+    background-color: #f4a261;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 25px;
     border: none;
     cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #b3001b;
+    background-color: #e76f51;
 }
 
 section {
-    padding: 2em;
-    margin: 1em;
-    background-color: #f9f9f9;
-    border-radius: 10px;
+    padding: 3em;
+    margin: 1em 5%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    animation: fadeInUp 2s;
+}
+
+h2 {
+    color: #2d6a4f;
+    font-size: 2em;
+    text-align: center;
 }
 
 footer {
-    background-color: #002f6c;
+    background-color: #2d6a4f;
     color: white;
     text-align: center;
     padding: 1em;
+    margin-top: 2em;
 }
 
-#contact, #about {
-    background-image: url('alphabet.jpg'); /* Exemple d'élément scolaire */
-    background-size: cover;
-    background-position: center;
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Animation styles */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.bounceIn {
+    animation-name: bounceIn;
+}
+
+.zoomIn {
+    animation-name: zoomIn;
+}
+
+.slideInLeft {
+    animation-name: slideInLeft;
+}
+
+.slideInRight {
+    animation-name: slideInRight;
+}
+
+@keyframes slideInLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
 }
