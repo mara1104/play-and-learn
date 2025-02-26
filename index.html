@@ -3,30 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Enfantin</title>
+    <title>Mon Jeu Éducatif</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Bienvenue sur notre site amusant!</h1>
-        </header>
-        <main>
-            <div class="buttons">
-                <button onclick="window.location.href='contact.html'">Contactez-nous</button>
-                <button onclick="window.location.href='about.html'">À propos de nous</button>
-                <button onclick="window.location.href='games.html'">Jeux</button>
-            </div>
-            
-            <div class="signup-section">
-                <h2>Inscrivez-vous pour accéder aux jeux exclusifs!</h2>
-                <button id="signUpBtn">S'inscrire avec Gmail</button>
-            </div>
-        </main>
-    </div>
+    <header>
+        <nav>
+            <button onclick="location.href='#contact'">Contactez-nous</button>
+            <button onclick="location.href='#about'">À propos de nous</button>
+            <button onclick="window.location.href='https://lien-vers-votre-jeu.com'">Jeu en cours de création</button>
+        </nav>
+    </header>
 
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <section id="home">
+        <h1>Bienvenue sur notre site éducatif !</h1>
+        <p>Inscription avec Gmail pour accéder au contenu.</p>
+        <button id="login-button">S'inscrire avec Gmail</button>
+    </section>
+
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <p>Pour toute question, contactez-nous à : contact@notresite.com</p>
+    </section>
+
+    <section id="about">
+        <h2>À propos de nous</h2>
+        <p>Nous créons des jeux éducatifs pour les enfants de 6 à 8 ans dans les matières de l'allemand, du français et des mathématiques.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mon Jeu Éducatif</p>
+    </footer>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="script.js"></script>
 </body>
 </html>
