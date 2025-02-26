@@ -12,7 +12,6 @@ body {
     background-size: cover;
     background-position: center;
     animation: fadeIn 2s ease-in-out;
-    text-align: center;
 }
 
 header {
@@ -39,24 +38,12 @@ nav button:hover {
 }
 
 #home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5em;
+    text-align: center;
+    padding: 3em;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     margin: 2em 5%;
     animation: bounceIn 2s;
-}
-
-.logo-container {
-    margin-bottom: 1em;
-}
-
-.logo {
-    width: 150px; /* Taille du logo */
-    height: auto;
 }
 
 h1 {
@@ -77,6 +64,20 @@ button {
 
 button:hover {
     background-color: #e76f51;
+}
+
+section {
+    padding: 3em;
+    margin: 1em 5%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    animation: fadeInUp 2s;
+}
+
+h2 {
+    color: #2d6a4f;
+    font-size: 2em;
+    text-align: center;
 }
 
 footer {
@@ -108,16 +109,7 @@ footer {
     100% { transform: scale(1); opacity: 1; }
 }
 
-@keyframes slideInLeft {
-    0% { transform: translateX(-100%); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes slideInRight {
-    0% { transform: translateX(100%); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
-}
-
+/* Animation styles */
 .animated {
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -141,4 +133,14 @@ footer {
 
 .slideInRight {
     animation-name: slideInRight;
+}
+
+@keyframes slideInLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
 }
